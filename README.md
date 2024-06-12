@@ -1,59 +1,22 @@
+# Project Name
+## Ssapi Python Rest API's
+# Description 
+* This project consists of various APIs developed using Django restfrawework.
 
-# Ssapi Python Rest API's
-
-
-
-
-## Environment Variables
-
-To run this project, you will need to add the following environment variables to your .env file
-
-`API_KEY` : http://127.0.0.1:8000/api
-
-Database Details
-
-`HOST` : Database Hostname
-
-`PORT ` : Database Port Number 
-
-`DB_USER` : Database User Name
-
-`DB_PASSWORD ` : Database User Password 
-
-SMPT  Details
-
-`bakendtype` : True
-
-`EMAIL_HOST ` : EMAIL_HOST
-
-`EMAIL_PORT` : EMAIL_PORT 
-
-`EMAIL_USE_TLS ` : True
-
-`EMAIL_HOST_USER ` : EMAIL_HOST_USER/Email Address
-
-`EMAIL_HOST_PASSWORD ` : EMAIL_HOST_PASSWORD
-
-
-
-
-
-
-
+# Setup Instructions
 
 ## Installation
+### Python Install Process 
+Before proceeding, ensure Python is installed on your system. If not, you can download and install Python from [here](https://www.python.org/downloads/).
 
- Firsty insatall the Python in the System 
-     Python Install Process 
-[Python Install Process](https://www.python.org/downloads/)
+### Django - Setting up a Virtual Environment
+To work with Django, it's recommended to create a virtual environment. Follow the steps outlined [here](https://www.w3schools.com/django/django_create_virtual_environment.php) to create one.
 
-Django - Create Virtual Environment
-[Django - Create Virtual Environment](https://www.w3schools.com/django/django_create_virtual_environment.php)
+### Installing Django
+Once the virtual environment is set up, you can install Django within it. Refer to [this guide](https://www.w3schools.com/django/django_install_django.php) for detailed instructions on installing Django.
 
-Install Django
-[Install Django](https://www.w3schools.com/django/django_install_django.php)
-## Run Locally
 
+# Getting Started
 
 Clone the project
 
@@ -61,40 +24,48 @@ Clone the project
   git clone https://github.com/exoticaitsolutions/ssapi.git
 ```
 
-Go to the project directory
+## Go to the project directory
 
 ```bash
   cd ssapi
 ```
-
-Install Following dependencies
-
-OS Module  
-```bash
-  import os
-
+## Go to the main project
 ```
-  simplejwt 
+  cd ssapi\Rest_api
+```
+
+# Install Dependencies
+Using requirements.txt
+```
+pip install -r requirements.txt
+```
+## Individual Dependencies
+djangorestframework-simplejwt 
 ```bash
   pip install djangorestframework-simplejwt
 ```
-
- mysqlclient 2.2.4 
+mysqlclient
 ```bash
   pip install mysqlclient
 ```
- python-dotenv
+python-dotenv
 ```bash
   pip install python-dotenv
 ```
-Go to the Mail project directory
 
-```bash
-  cd ssapi\Rest_api
-```
-Create the .env File and Copy the value form .env.example
+# Create .env file
+## For linux
+touch .env
 
-Setup the Database with db name "django_rest_api"
+## For Windows
+type null > .env
+
+## Environment Variables
+* To run this project, you'll need to set the following environment variables in your .env file:
+
+
+
+# Database Details
 ```bash
 HOST=HOSTNAME
 PORT=PORT 
@@ -103,7 +74,7 @@ DB_USER=DB_USER
 DB_PASSWORD=DB_PASSWORD
 ```
 
-Setup the Email SMPT
+SMPT  Details
 ```bash
 bakendtype=True
 EMAIL_HOST=EMAIL_HOST
@@ -113,11 +84,6 @@ EMAIL_HOST_USER=EMAIL_HOST_USER
 EMAIL_HOST_PASSWORD=EMAIL_HOST_PASSWORD
 ```
 
-Go to the this directory 
-```bash
-  cd ssapi\Rest_api
-```
-
 Run the Migration Cammand 
  ```bash
   python manage.py migrate
@@ -125,5 +91,5 @@ Run the Migration Cammand
 
 Run the Serve Using code  
  ```bash
-  py manage.py runserver 
+  python manage.py runserver 
 ```
